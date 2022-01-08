@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+    client: internal
+    version: 1.0.0
+    environtment: dev
+  annotations:
+    description: Simple backend service
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 5000
+      nodePort: 31515
+  selector:
+    app: backend

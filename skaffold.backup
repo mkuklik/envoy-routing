@@ -1,0 +1,136 @@
+
+apiVersion: skaffold/v2beta6
+kind: Config
+
+build:
+  artifacts:
+  # image tags are relative; to specify an image repo (e.g. GCR), you
+  # must provide a "default repo" using one of the methods described 
+  # here:
+  # https://skaffold.dev/docs/concepts/#image-repository-handling
+  # - image: localhost:5000/flask
+  #   context: hello
+  - image: server-service
+    context: server
+  - image: static-service
+    context: tshub-website
+    docker:
+      buildArgs:
+        URL: "{{.URL}}"
+  - image: backend-service
+    context: backend-service
+  tagPolicy:
+    # gitCommit: {}
+    # gitCommit: 
+      # prefix: "{{.CONFIG}}"
+    envTemplate:
+        # template: "{{.IMAGE_REG}}/{{.IMAGE_REG_NS}}/{{.IMAGE_NAME}}:
+        # template: "{{.IMAGE_NAME}}-{{.CONFIG}}:{{.TAG}}"
+        template: "{{.TAG}}"
+deploy:
+  # !!! helm releases prevents kubectl to substitute images with one build with tags !!!
+  # helm:
+  #   releases:
+  #     - name: rmongo
+  #       remote: true
+  #       chartPath: stable/mongodb-replicaset
+  #       wait: true
+  #       valuesFiles:
+  #         - ./k8s/rmongo/values.yaml
+
+  kubectl:
+    manifests:
+    - ./k8s/dashboard.yaml
+    - ./k8s/dashboard-account.yaml
+    - ./k8s/configmap.yaml
+    - ./k8s/config/permissions-config.yaml
+    - ./k8s/config/catalog-config.yaml
+    - ./k8s/config/fred-data-config.yaml
+    - ./k8s/redis.yaml
+    - ./k8s/static.yaml
+    - ./k8s/webui.yaml
+    - ./k8s/fred-data.yaml
+    - ./k8s/analytics.yaml
+    - ./k8s/chronosdb.yaml
+    - ./k8s/tasks.yaml
+    - ./k8s/permissions.yaml
+    - ./k8s/identity.yaml
+    - ./k8s/workbook.yaml
+    - ./k8s/catalog.yaml
+
+
+profiles:
+- name: dev
+  deploy:
+    kubectl:
+      manifests:
+      # common
+        - ./k8s/dashboard.yaml
+        - ./k8s/dashboard-account.yaml
+        - ./k8s/configmap-dev.yaml
+        - ./k8s/config/permissions-config.yaml
+        - ./k8s/config/catalog-config.yaml
+        - ./k8s/config/fred-data-config.yaml
+        - ./k8s/redis.yaml
+        - ./k8s/static.yaml
+        - ./k8s/webui.yaml
+        - ./k8s/fred-data.yaml
+        - ./k8s/analytics.yaml
+        - ./k8s/chronosdb.yaml
+        - ./k8s/tasks.yaml
+        - ./k8s/permissions.yaml
+        - ./k8s/identity.yaml
+        - ./k8s/workbook.yaml
+        - ./k8s/catalog.yaml
+        # profile specific
+        - ./k8s/ingress-dev.yaml
+        - ./k8s/certificate-tshub-dev.yaml
+
+- name: prod
+  deploy:
+    kubectl:
+      manifests:
+       # common
+        - ./k8s/dashboard.yaml
+        - ./k8s/dashboard-account.yaml
+        - ./k8s/configmap-prod.yaml
+        - ./k8s/config/permissions-config.yaml
+        - ./k8s/config/catalog-config.yaml
+        - ./k8s/config/fred-data-config.yaml
+        - ./k8s/redis.yaml
+        - ./k8s/static.yaml
+        - ./k8s/webui.yaml
+        - ./k8s/fred-data.yaml
+        - ./k8s/analytics.yaml
+        - ./k8s/chronosdb.yaml
+        - ./k8s/tasks.yaml
+        - ./k8s/permissions.yaml
+        - ./k8s/identity.yaml
+        - ./k8s/workbook.yaml
+        - ./k8s/catalog.yaml
+      # profile specific
+        - ./k8s/ingress-prod.yaml
+        - ./k8s/certificate-tshub-prod.yaml
+
+
+# portForward:
+#   - resourceType: deployment
+#     resourceName: leeroy-web
+#     port: 8080
+#     localPort: 9000
+
+# profiles:
+# # "gcb" profile allows building and pushing the images
+# # on Google Container Builder without requiring docker
+# # installed on the developer machine. However, note that
+# # since GCB does not cache the builds, each build will
+# # start from scratch and therefore take a long time.
+# #
+# # This is not used by default. To use it, run:
+# #     skaffold run -p gcb
+# - name: gcb
+#   build:
+#     googleCloudBuild:
+#       diskSizeGb: 300
+#       machineType: N1_HIGHCPU_32
+#       timeout: 4000s

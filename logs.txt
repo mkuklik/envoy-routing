@@ -1,0 +1,573 @@
+* 
+* ==> Audit <==
+* |------------|--------------------------------|---------------|----------|---------|-------------------------------|-------------------------------|
+|  Command   |              Args              |    Profile    |   User   | Version |          Start Time           |           End Time            |
+|------------|--------------------------------|---------------|----------|---------|-------------------------------|-------------------------------|
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:23:13 PST | Thu, 06 Jan 2022 23:23:13 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:23:13 PST | Thu, 06 Jan 2022 23:23:13 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:23:51 PST | Thu, 06 Jan 2022 23:23:51 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:23:51 PST | Thu, 06 Jan 2022 23:23:51 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:24:10 PST | Thu, 06 Jan 2022 23:24:10 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:24:10 PST | Thu, 06 Jan 2022 23:24:10 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:24:26 PST | Thu, 06 Jan 2022 23:24:27 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:24:27 PST | Thu, 06 Jan 2022 23:24:27 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:25:22 PST | Thu, 06 Jan 2022 23:25:22 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:25:22 PST | Thu, 06 Jan 2022 23:25:22 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:35:36 PST | Thu, 06 Jan 2022 23:35:37 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:35:37 PST | Thu, 06 Jan 2022 23:35:37 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:37:28 PST | Thu, 06 Jan 2022 23:37:28 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:37:28 PST | Thu, 06 Jan 2022 23:37:28 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:41:30 PST | Thu, 06 Jan 2022 23:41:30 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:41:30 PST | Thu, 06 Jan 2022 23:41:30 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:47:17 PST | Thu, 06 Jan 2022 23:47:17 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:47:17 PST | Thu, 06 Jan 2022 23:47:17 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:47:39 PST | Thu, 06 Jan 2022 23:47:39 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:47:39 PST | Thu, 06 Jan 2022 23:47:39 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:48:04 PST | Thu, 06 Jan 2022 23:48:04 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:48:04 PST | Thu, 06 Jan 2022 23:48:04 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:48:49 PST | Thu, 06 Jan 2022 23:48:50 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:48:50 PST | Thu, 06 Jan 2022 23:48:50 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:50:46 PST | Thu, 06 Jan 2022 23:50:46 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:50:46 PST | Thu, 06 Jan 2022 23:50:46 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:51:47 PST | Thu, 06 Jan 2022 23:51:47 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:51:47 PST | Thu, 06 Jan 2022 23:51:47 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:56:28 PST | Thu, 06 Jan 2022 23:56:28 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:56:28 PST | Thu, 06 Jan 2022 23:56:28 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:58:04 PST | Thu, 06 Jan 2022 23:58:05 PST |
+| profile    | list -o json --user=skaffold   | minikube      | skaffold | v1.24.0 | Thu, 06 Jan 2022 23:58:05 PST | Thu, 06 Jan 2022 23:58:05 PST |
+| start      | -p envoy-profile               | envoy-profile | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:07:15 PST | Fri, 07 Jan 2022 00:08:43 PST |
+| docker-env | -p envoy-profile               | envoy-profile | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:09:41 PST | Fri, 07 Jan 2022 00:09:41 PST |
+| docker-env | --shell none -p envoy-profile  | envoy-profile | skaffold | v1.24.0 | Fri, 07 Jan 2022 00:10:02 PST | Fri, 07 Jan 2022 00:10:02 PST |
+|            | --user=skaffold                |               |          |         |                               |                               |
+| stop       |                                | minikube      | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:20:33 PST | Fri, 07 Jan 2022 00:20:33 PST |
+| start      | -p envoy-profile               | envoy-profile | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:20:52 PST | Fri, 07 Jan 2022 00:20:55 PST |
+| addons     |                                | minikube      | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:21:33 PST | Fri, 07 Jan 2022 00:21:33 PST |
+| addons     | options                        | minikube      | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:21:38 PST | Fri, 07 Jan 2022 00:21:38 PST |
+| addons     | list                           | minikube      | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:21:44 PST | Fri, 07 Jan 2022 00:21:44 PST |
+| start      | -p envoy-profile               | envoy-profile | mkuklik  | v1.24.0 | Fri, 07 Jan 2022 00:22:17 PST | Fri, 07 Jan 2022 00:22:20 PST |
+|------------|--------------------------------|---------------|----------|---------|-------------------------------|-------------------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/01/07 00:22:17
+Running on machine: pop-os
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0107 00:22:17.859361   94783 out.go:297] Setting OutFile to fd 1 ...
+I0107 00:22:17.859403   94783 out.go:349] isatty.IsTerminal(1) = true
+I0107 00:22:17.859404   94783 out.go:310] Setting ErrFile to fd 2...
+I0107 00:22:17.859407   94783 out.go:349] isatty.IsTerminal(2) = true
+I0107 00:22:17.859468   94783 root.go:313] Updating PATH: /home/mkuklik/.minikube/bin
+W0107 00:22:17.859522   94783 root.go:291] Error reading config file at /home/mkuklik/.minikube/config/config.json: open /home/mkuklik/.minikube/config/config.json: no such file or directory
+I0107 00:22:17.859577   94783 out.go:304] Setting JSON to false
+I0107 00:22:17.880428   94783 start.go:112] hostinfo: {"hostname":"pop-os","uptime":5656,"bootTime":1641538082,"procs":509,"os":"linux","platform":"debian","platformFamily":"debian","platformVersion":"11.0","kernelVersion":"5.15.8-76051508-generic","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"e960e809-a7a3-387d-cf66-156061cfa3f9"}
+I0107 00:22:17.880462   94783 start.go:122] virtualization: kvm host
+I0107 00:22:17.883244   94783 out.go:176] 😄  [envoy-profile] minikube v1.24.0 on Debian 11.0
+I0107 00:22:17.883353   94783 notify.go:174] Checking for updates...
+I0107 00:22:17.883530   94783 config.go:176] Loaded profile config "envoy-profile": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.22.3
+I0107 00:22:17.883557   94783 driver.go:343] Setting default libvirt URI to qemu:///system
+I0107 00:22:17.907143   94783 docker.go:132] docker version: linux-20.10.12
+I0107 00:22:17.907217   94783 cli_runner.go:115] Run: docker system info --format "{{json .}}"
+I0107 00:22:17.954747   94783 info.go:263] docker info: {ID:I5NV:ISX4:LRLQ:C4BM:LZUA:QJEZ:PVA7:LUYX:4N76:ITGZ:OCIX:IPKM Containers:21 ContainersRunning:2 ContainersPaused:0 ContainersStopped:19 Images:27 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:32 OomKillDisable:false NGoroutines:39 SystemTime:2022-01-07 00:22:17.922330564 -0800 PST LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:5.15.8-76051508-generic OperatingSystem:Pop!_OS 21.10 OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:16 MemTotal:67406901248 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:pop-os Labels:[] ExperimentalBuild:false ServerVersion:20.10.12 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:7b11cfaabd73bb80907dd23182b9347b4245eb5d Expected:7b11cfaabd73bb80907dd23182b9347b4245eb5d} RuncCommit:{ID:v1.0.2-0-g52b36a2 Expected:v1.0.2-0-g52b36a2} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.7.1-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.12.0]] Warnings:<nil>}}
+I0107 00:22:17.954809   94783 docker.go:237] overlay module found
+I0107 00:22:17.957443   94783 out.go:176] ✨  Using the docker driver based on existing profile
+I0107 00:22:17.957458   94783 start.go:280] selected driver: docker
+I0107 00:22:17.957462   94783 start.go:762] validating driver "docker" against &{Name:envoy-profile KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c Memory:16000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.3 ClusterName:envoy-profile Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.58.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}] Addons:map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/mkuklik:/minikube-host}
+I0107 00:22:17.957522   94783 start.go:773] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc:}
+I0107 00:22:17.957622   94783 cli_runner.go:115] Run: docker system info --format "{{json .}}"
+I0107 00:22:18.005058   94783 info.go:263] docker info: {ID:I5NV:ISX4:LRLQ:C4BM:LZUA:QJEZ:PVA7:LUYX:4N76:ITGZ:OCIX:IPKM Containers:21 ContainersRunning:2 ContainersPaused:0 ContainersStopped:19 Images:27 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:32 OomKillDisable:false NGoroutines:39 SystemTime:2022-01-07 00:22:17.97230795 -0800 PST LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:5.15.8-76051508-generic OperatingSystem:Pop!_OS 21.10 OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:16 MemTotal:67406901248 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:pop-os Labels:[] ExperimentalBuild:false ServerVersion:20.10.12 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:7b11cfaabd73bb80907dd23182b9347b4245eb5d Expected:7b11cfaabd73bb80907dd23182b9347b4245eb5d} RuncCommit:{ID:v1.0.2-0-g52b36a2 Expected:v1.0.2-0-g52b36a2} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.7.1-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.12.0]] Warnings:<nil>}}
+I0107 00:22:18.023901   94783 cni.go:93] Creating CNI manager for ""
+I0107 00:22:18.023911   94783 cni.go:167] CNI unnecessary in this configuration, recommending no CNI
+I0107 00:22:18.023916   94783 start_flags.go:282] config:
+{Name:envoy-profile KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c Memory:16000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.3 ClusterName:envoy-profile Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.58.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}] Addons:map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/mkuklik:/minikube-host}
+I0107 00:22:18.026632   94783 out.go:176] 👍  Starting control plane node envoy-profile in cluster envoy-profile
+I0107 00:22:18.026652   94783 cache.go:118] Beginning downloading kic base image for docker with docker
+I0107 00:22:18.029100   94783 out.go:176] 🚜  Pulling base image ...
+I0107 00:22:18.029119   94783 preload.go:132] Checking if preload exists for k8s version v1.22.3 and runtime docker
+I0107 00:22:18.029135   94783 preload.go:148] Found local preload: /home/mkuklik/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.3-docker-overlay2-amd64.tar.lz4
+I0107 00:22:18.029139   94783 cache.go:57] Caching tarball of preloaded images
+I0107 00:22:18.029186   94783 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c in local docker daemon
+I0107 00:22:18.029227   94783 preload.go:174] Found /home/mkuklik/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.3-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0107 00:22:18.029235   94783 cache.go:60] Finished verifying existence of preloaded tar for  v1.22.3 on docker
+I0107 00:22:18.029310   94783 profile.go:147] Saving config to /home/mkuklik/.minikube/profiles/envoy-profile/config.json ...
+I0107 00:22:18.049266   94783 image.go:79] Found gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c in local docker daemon, skipping pull
+I0107 00:22:18.049280   94783 cache.go:140] gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c exists in daemon, skipping load
+I0107 00:22:18.049290   94783 cache.go:206] Successfully downloaded all kic artifacts
+I0107 00:22:18.049318   94783 start.go:313] acquiring machines lock for envoy-profile: {Name:mkfdb05efebeaee6ac63010e335d7f6200b1ea8d Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0107 00:22:18.049379   94783 start.go:317] acquired machines lock for "envoy-profile" in 44.083µs
+I0107 00:22:18.049388   94783 start.go:93] Skipping create...Using existing machine configuration
+I0107 00:22:18.049390   94783 fix.go:55] fixHost starting: 
+I0107 00:22:18.049536   94783 cli_runner.go:115] Run: docker container inspect envoy-profile --format={{.State.Status}}
+I0107 00:22:18.068150   94783 fix.go:108] recreateIfNeeded on envoy-profile: state=Running err=<nil>
+W0107 00:22:18.068162   94783 fix.go:134] unexpected machine state, will restart: <nil>
+I0107 00:22:18.070823   94783 out.go:176] 🏃  Updating the running docker "envoy-profile" container ...
+I0107 00:22:18.070840   94783 machine.go:88] provisioning docker machine ...
+I0107 00:22:18.070849   94783 ubuntu.go:169] provisioning hostname "envoy-profile"
+I0107 00:22:18.070884   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.089252   94783 main.go:130] libmachine: Using SSH client type: native
+I0107 00:22:18.089449   94783 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49157 <nil> <nil>}
+I0107 00:22:18.089462   94783 main.go:130] libmachine: About to run SSH command:
+sudo hostname envoy-profile && echo "envoy-profile" | sudo tee /etc/hostname
+I0107 00:22:18.189013   94783 main.go:130] libmachine: SSH cmd err, output: <nil>: envoy-profile
+
+I0107 00:22:18.189056   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.206336   94783 main.go:130] libmachine: Using SSH client type: native
+I0107 00:22:18.206423   94783 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49157 <nil> <nil>}
+I0107 00:22:18.206431   94783 main.go:130] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\senvoy-profile' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 envoy-profile/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 envoy-profile' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0107 00:22:18.297024   94783 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I0107 00:22:18.297036   94783 ubuntu.go:175] set auth options {CertDir:/home/mkuklik/.minikube CaCertPath:/home/mkuklik/.minikube/certs/ca.pem CaPrivateKeyPath:/home/mkuklik/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/mkuklik/.minikube/machines/server.pem ServerKeyPath:/home/mkuklik/.minikube/machines/server-key.pem ClientKeyPath:/home/mkuklik/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/mkuklik/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/mkuklik/.minikube}
+I0107 00:22:18.297048   94783 ubuntu.go:177] setting up certificates
+I0107 00:22:18.297053   94783 provision.go:83] configureAuth start
+I0107 00:22:18.297088   94783 cli_runner.go:115] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" envoy-profile
+I0107 00:22:18.314730   94783 provision.go:138] copyHostCerts
+I0107 00:22:18.314756   94783 exec_runner.go:144] found /home/mkuklik/.minikube/ca.pem, removing ...
+I0107 00:22:18.314761   94783 exec_runner.go:207] rm: /home/mkuklik/.minikube/ca.pem
+I0107 00:22:18.314796   94783 exec_runner.go:151] cp: /home/mkuklik/.minikube/certs/ca.pem --> /home/mkuklik/.minikube/ca.pem (1078 bytes)
+I0107 00:22:18.314847   94783 exec_runner.go:144] found /home/mkuklik/.minikube/cert.pem, removing ...
+I0107 00:22:18.314849   94783 exec_runner.go:207] rm: /home/mkuklik/.minikube/cert.pem
+I0107 00:22:18.314864   94783 exec_runner.go:151] cp: /home/mkuklik/.minikube/certs/cert.pem --> /home/mkuklik/.minikube/cert.pem (1123 bytes)
+I0107 00:22:18.314894   94783 exec_runner.go:144] found /home/mkuklik/.minikube/key.pem, removing ...
+I0107 00:22:18.314895   94783 exec_runner.go:207] rm: /home/mkuklik/.minikube/key.pem
+I0107 00:22:18.314912   94783 exec_runner.go:151] cp: /home/mkuklik/.minikube/certs/key.pem --> /home/mkuklik/.minikube/key.pem (1675 bytes)
+I0107 00:22:18.314936   94783 provision.go:112] generating server cert: /home/mkuklik/.minikube/machines/server.pem ca-key=/home/mkuklik/.minikube/certs/ca.pem private-key=/home/mkuklik/.minikube/certs/ca-key.pem org=mkuklik.envoy-profile san=[192.168.58.2 127.0.0.1 localhost 127.0.0.1 minikube envoy-profile]
+I0107 00:22:18.381725   94783 provision.go:172] copyRemoteCerts
+I0107 00:22:18.381753   94783 ssh_runner.go:152] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0107 00:22:18.381775   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.399737   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:18.470826   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1078 bytes)
+I0107 00:22:18.478919   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/machines/server.pem --> /etc/docker/server.pem (1216 bytes)
+I0107 00:22:18.486724   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0107 00:22:18.494440   94783 provision.go:86] duration metric: configureAuth took 197.382085ms
+I0107 00:22:18.494447   94783 ubuntu.go:193] setting minikube options for container-runtime
+I0107 00:22:18.494541   94783 config.go:176] Loaded profile config "envoy-profile": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.22.3
+I0107 00:22:18.494567   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.512614   94783 main.go:130] libmachine: Using SSH client type: native
+I0107 00:22:18.512713   94783 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49157 <nil> <nil>}
+I0107 00:22:18.512718   94783 main.go:130] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0107 00:22:18.605010   94783 main.go:130] libmachine: SSH cmd err, output: <nil>: overlay
+
+I0107 00:22:18.605018   94783 ubuntu.go:71] root file system type: overlay
+I0107 00:22:18.605106   94783 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I0107 00:22:18.605140   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.621668   94783 main.go:130] libmachine: Using SSH client type: native
+I0107 00:22:18.621756   94783 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49157 <nil> <nil>}
+I0107 00:22:18.621795   94783 main.go:130] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0107 00:22:18.721267   94783 main.go:130] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I0107 00:22:18.721311   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.739077   94783 main.go:130] libmachine: Using SSH client type: native
+I0107 00:22:18.739160   94783 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49157 <nil> <nil>}
+I0107 00:22:18.739169   94783 main.go:130] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0107 00:22:18.830771   94783 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I0107 00:22:18.830781   94783 machine.go:91] provisioned docker machine in 759.936999ms
+I0107 00:22:18.830786   94783 start.go:267] post-start starting for "envoy-profile" (driver="docker")
+I0107 00:22:18.830789   94783 start.go:277] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0107 00:22:18.830821   94783 ssh_runner.go:152] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0107 00:22:18.830846   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.848642   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:18.922697   94783 ssh_runner.go:152] Run: cat /etc/os-release
+I0107 00:22:18.923811   94783 main.go:130] libmachine: Couldn't set key PRIVACY_POLICY_URL, no corresponding struct field found
+I0107 00:22:18.923819   94783 main.go:130] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I0107 00:22:18.923824   94783 main.go:130] libmachine: Couldn't set key UBUNTU_CODENAME, no corresponding struct field found
+I0107 00:22:18.923827   94783 info.go:137] Remote host: Ubuntu 20.04.2 LTS
+I0107 00:22:18.923831   94783 filesync.go:126] Scanning /home/mkuklik/.minikube/addons for local assets ...
+I0107 00:22:18.923856   94783 filesync.go:126] Scanning /home/mkuklik/.minikube/files for local assets ...
+I0107 00:22:18.923864   94783 start.go:270] post-start completed in 93.075135ms
+I0107 00:22:18.923882   94783 ssh_runner.go:152] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0107 00:22:18.923902   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:18.940604   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:19.009158   94783 fix.go:57] fixHost completed within 959.76554ms
+I0107 00:22:19.009165   94783 start.go:80] releasing machines lock for "envoy-profile", held for 959.782432ms
+I0107 00:22:19.009211   94783 cli_runner.go:115] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" envoy-profile
+I0107 00:22:19.025839   94783 ssh_runner.go:152] Run: systemctl --version
+I0107 00:22:19.025874   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:19.025876   94783 ssh_runner.go:152] Run: curl -sS -m 2 https://k8s.gcr.io/
+I0107 00:22:19.025903   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:19.043050   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:19.043205   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:19.345271   94783 ssh_runner.go:152] Run: sudo systemctl is-active --quiet service containerd
+I0107 00:22:19.350072   94783 ssh_runner.go:152] Run: sudo systemctl cat docker.service
+I0107 00:22:19.354271   94783 cruntime.go:255] skipping containerd shutdown because we are bound to it
+I0107 00:22:19.354295   94783 ssh_runner.go:152] Run: sudo systemctl is-active --quiet service crio
+I0107 00:22:19.358509   94783 ssh_runner.go:152] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///var/run/dockershim.sock
+image-endpoint: unix:///var/run/dockershim.sock
+" | sudo tee /etc/crictl.yaml"
+I0107 00:22:19.364162   94783 ssh_runner.go:152] Run: sudo systemctl unmask docker.service
+I0107 00:22:19.468896   94783 ssh_runner.go:152] Run: sudo systemctl enable docker.socket
+I0107 00:22:19.542203   94783 ssh_runner.go:152] Run: sudo systemctl cat docker.service
+I0107 00:22:19.546688   94783 ssh_runner.go:152] Run: sudo systemctl daemon-reload
+I0107 00:22:19.612750   94783 ssh_runner.go:152] Run: sudo systemctl start docker
+I0107 00:22:19.617343   94783 ssh_runner.go:152] Run: docker version --format {{.Server.Version}}
+I0107 00:22:19.638100   94783 ssh_runner.go:152] Run: docker version --format {{.Server.Version}}
+I0107 00:22:19.661238   94783 out.go:203] 🐳  Preparing Kubernetes v1.22.3 on Docker 20.10.8 ...
+I0107 00:22:19.661289   94783 cli_runner.go:115] Run: docker network inspect envoy-profile --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0107 00:22:19.678275   94783 ssh_runner.go:152] Run: grep 192.168.58.1	host.minikube.internal$ /etc/hosts
+I0107 00:22:19.680115   94783 preload.go:132] Checking if preload exists for k8s version v1.22.3 and runtime docker
+I0107 00:22:19.680146   94783 ssh_runner.go:152] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0107 00:22:19.697027   94783 docker.go:558] Got preloaded images: -- stdout --
+backend-img:6391c10af402bc293c75bc26e6894ecfb4cf8443b26bb44c3fb0c79cae100fb0
+backend-img:d97a775-dirty
+golang:alpine
+k8s.gcr.io/kube-apiserver:v1.22.3
+k8s.gcr.io/kube-controller-manager:v1.22.3
+k8s.gcr.io/kube-scheduler:v1.22.3
+k8s.gcr.io/kube-proxy:v1.22.3
+kubernetesui/dashboard:v2.3.1
+k8s.gcr.io/etcd:3.5.0-0
+kubernetesui/metrics-scraper:v1.0.7
+k8s.gcr.io/coredns/coredns:v1.8.4
+gcr.io/k8s-minikube/storage-provisioner:v5
+k8s.gcr.io/pause:3.5
+
+-- /stdout --
+I0107 00:22:19.697037   94783 docker.go:489] Images already preloaded, skipping extraction
+I0107 00:22:19.697063   94783 ssh_runner.go:152] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0107 00:22:19.713490   94783 docker.go:558] Got preloaded images: -- stdout --
+backend-img:6391c10af402bc293c75bc26e6894ecfb4cf8443b26bb44c3fb0c79cae100fb0
+backend-img:d97a775-dirty
+golang:alpine
+k8s.gcr.io/kube-apiserver:v1.22.3
+k8s.gcr.io/kube-scheduler:v1.22.3
+k8s.gcr.io/kube-controller-manager:v1.22.3
+k8s.gcr.io/kube-proxy:v1.22.3
+kubernetesui/dashboard:v2.3.1
+k8s.gcr.io/etcd:3.5.0-0
+kubernetesui/metrics-scraper:v1.0.7
+k8s.gcr.io/coredns/coredns:v1.8.4
+gcr.io/k8s-minikube/storage-provisioner:v5
+k8s.gcr.io/pause:3.5
+
+-- /stdout --
+I0107 00:22:19.713499   94783 cache_images.go:79] Images are preloaded, skipping loading
+I0107 00:22:19.713531   94783 ssh_runner.go:152] Run: docker info --format {{.CgroupDriver}}
+I0107 00:22:19.754782   94783 cni.go:93] Creating CNI manager for ""
+I0107 00:22:19.754789   94783 cni.go:167] CNI unnecessary in this configuration, recommending no CNI
+I0107 00:22:19.754795   94783 kubeadm.go:87] Using pod CIDR: 10.244.0.0/16
+I0107 00:22:19.754801   94783 kubeadm.go:153] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:192.168.58.2 APIServerPort:8443 KubernetesVersion:v1.22.3 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:envoy-profile NodeName:envoy-profile DNSDomain:cluster.local CRISocket:/var/run/dockershim.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "192.168.58.2"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NoTaintMaster:true NodeIP:192.168.58.2 CgroupDriver:systemd ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[]}
+I0107 00:22:19.754873   94783 kubeadm.go:157] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.58.2
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: /var/run/dockershim.sock
+  name: "envoy-profile"
+  kubeletExtraArgs:
+    node-ip: 192.168.58.2
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "192.168.58.2"]
+  extraArgs:
+    enable-admission-plugins: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: "true"
+    leader-elect: "false"
+scheduler:
+  extraArgs:
+    leader-elect: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+dns:
+  type: CoreDNS
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+    extraArgs:
+      proxy-refresh-interval: "70000"
+kubernetesVersion: v1.22.3
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: systemd
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%!"(MISSING)
+  nodefs.inodesFree: "0%!"(MISSING)
+  imagefs.available: "0%!"(MISSING)
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0107 00:22:19.754923   94783 kubeadm.go:909] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.22.3/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime=docker --hostname-override=envoy-profile --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.58.2
+
+[Install]
+ config:
+{KubernetesVersion:v1.22.3 ClusterName:envoy-profile Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:}
+I0107 00:22:19.754953   94783 ssh_runner.go:152] Run: sudo ls /var/lib/minikube/binaries/v1.22.3
+I0107 00:22:19.758537   94783 binaries.go:44] Found k8s binaries, skipping transfer
+I0107 00:22:19.758565   94783 ssh_runner.go:152] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0107 00:22:19.761684   94783 ssh_runner.go:319] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (339 bytes)
+I0107 00:22:19.767666   94783 ssh_runner.go:319] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0107 00:22:19.773179   94783 ssh_runner.go:319] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2055 bytes)
+I0107 00:22:19.778783   94783 ssh_runner.go:152] Run: grep 192.168.58.2	control-plane.minikube.internal$ /etc/hosts
+I0107 00:22:19.780089   94783 certs.go:54] Setting up /home/mkuklik/.minikube/profiles/envoy-profile for IP: 192.168.58.2
+I0107 00:22:19.780151   94783 certs.go:182] skipping minikubeCA CA generation: /home/mkuklik/.minikube/ca.key
+I0107 00:22:19.780176   94783 certs.go:182] skipping proxyClientCA CA generation: /home/mkuklik/.minikube/proxy-client-ca.key
+I0107 00:22:19.780223   94783 certs.go:298] skipping minikube-user signed cert generation: /home/mkuklik/.minikube/profiles/envoy-profile/client.key
+I0107 00:22:19.780259   94783 certs.go:298] skipping minikube signed cert generation: /home/mkuklik/.minikube/profiles/envoy-profile/apiserver.key.cee25041
+I0107 00:22:19.780284   94783 certs.go:298] skipping aggregator signed cert generation: /home/mkuklik/.minikube/profiles/envoy-profile/proxy-client.key
+I0107 00:22:19.780347   94783 certs.go:388] found cert: /home/mkuklik/.minikube/certs/home/mkuklik/.minikube/certs/ca-key.pem (1675 bytes)
+I0107 00:22:19.780367   94783 certs.go:388] found cert: /home/mkuklik/.minikube/certs/home/mkuklik/.minikube/certs/ca.pem (1078 bytes)
+I0107 00:22:19.780382   94783 certs.go:388] found cert: /home/mkuklik/.minikube/certs/home/mkuklik/.minikube/certs/cert.pem (1123 bytes)
+I0107 00:22:19.780396   94783 certs.go:388] found cert: /home/mkuklik/.minikube/certs/home/mkuklik/.minikube/certs/key.pem (1675 bytes)
+I0107 00:22:19.781179   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/profiles/envoy-profile/apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1399 bytes)
+I0107 00:22:19.788916   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/profiles/envoy-profile/apiserver.key --> /var/lib/minikube/certs/apiserver.key (1675 bytes)
+I0107 00:22:19.796490   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/profiles/envoy-profile/proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0107 00:22:19.804232   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/profiles/envoy-profile/proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1679 bytes)
+I0107 00:22:19.811970   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0107 00:22:19.819502   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1675 bytes)
+I0107 00:22:19.826882   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0107 00:22:19.834528   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1675 bytes)
+I0107 00:22:19.842055   94783 ssh_runner.go:319] scp /home/mkuklik/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0107 00:22:19.849544   94783 ssh_runner.go:319] scp memory --> /var/lib/minikube/kubeconfig (738 bytes)
+I0107 00:22:19.855070   94783 ssh_runner.go:152] Run: openssl version
+I0107 00:22:19.857324   94783 ssh_runner.go:152] Run: sudo /bin/bash -c "test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem"
+I0107 00:22:19.860682   94783 ssh_runner.go:152] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0107 00:22:19.861923   94783 certs.go:431] hashing: -rw-r--r-- 1 root root 1111 Dec 11  2020 /usr/share/ca-certificates/minikubeCA.pem
+I0107 00:22:19.861938   94783 ssh_runner.go:152] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0107 00:22:19.864154   94783 ssh_runner.go:152] Run: sudo /bin/bash -c "test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0"
+I0107 00:22:19.867069   94783 kubeadm.go:390] StartCluster: {Name:envoy-profile KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c Memory:16000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.3 ClusterName:envoy-profile Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.58.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}] Addons:map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/mkuklik:/minikube-host}
+I0107 00:22:19.867133   94783 ssh_runner.go:152] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0107 00:22:19.883755   94783 ssh_runner.go:152] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0107 00:22:19.887236   94783 kubeadm.go:401] found existing configuration files, will attempt cluster restart
+I0107 00:22:19.887241   94783 kubeadm.go:600] restartCluster start
+I0107 00:22:19.887262   94783 ssh_runner.go:152] Run: sudo test -d /data/minikube
+I0107 00:22:19.890292   94783 kubeadm.go:126] /data/minikube skipping compat symlinks: sudo test -d /data/minikube: Process exited with status 1
+stdout:
+
+stderr:
+I0107 00:22:19.891000   94783 kubeconfig.go:92] found "envoy-profile" server: "https://192.168.58.2:8443"
+I0107 00:22:19.892158   94783 ssh_runner.go:152] Run: sudo diff -u /var/tmp/minikube/kubeadm.yaml /var/tmp/minikube/kubeadm.yaml.new
+I0107 00:22:19.895098   94783 api_server.go:165] Checking apiserver status ...
+I0107 00:22:19.895115   94783 ssh_runner.go:152] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0107 00:22:19.902098   94783 ssh_runner.go:152] Run: sudo egrep ^[0-9]+:freezer: /proc/1829/cgroup
+W0107 00:22:19.905225   94783 api_server.go:176] unable to find freezer cgroup: sudo egrep ^[0-9]+:freezer: /proc/1829/cgroup: Process exited with status 1
+stdout:
+
+stderr:
+I0107 00:22:19.905230   94783 api_server.go:240] Checking apiserver healthz at https://192.168.58.2:8443/healthz ...
+I0107 00:22:19.908148   94783 api_server.go:266] https://192.168.58.2:8443/healthz returned 200:
+ok
+I0107 00:22:19.916755   94783 system_pods.go:86] 7 kube-system pods found
+I0107 00:22:19.916763   94783 system_pods.go:89] "coredns-78fcd69978-vwqb8" [6da3c91c-1d1e-45ab-9d4b-b6ae1ca2a6f2] Running
+I0107 00:22:19.916766   94783 system_pods.go:89] "etcd-envoy-profile" [0122a4fb-b625-4793-868f-bfb62e77ef7c] Running
+I0107 00:22:19.916768   94783 system_pods.go:89] "kube-apiserver-envoy-profile" [03507f53-08c6-4339-b919-62650a0af239] Running
+I0107 00:22:19.916770   94783 system_pods.go:89] "kube-controller-manager-envoy-profile" [a0b3860a-d9e9-44ea-adf2-dbd7d0f74bfe] Running
+I0107 00:22:19.916772   94783 system_pods.go:89] "kube-proxy-zrn6p" [67bcd028-c414-4f12-83fa-1f41586da5f6] Running
+I0107 00:22:19.916773   94783 system_pods.go:89] "kube-scheduler-envoy-profile" [fcca6385-9bf9-40cb-841a-71abc1ff15ec] Running
+I0107 00:22:19.916775   94783 system_pods.go:89] "storage-provisioner" [bc0a6b9b-cd10-45ea-8cc5-2e6dbab34c82] Running
+I0107 00:22:19.917127   94783 api_server.go:140] control plane version: v1.22.3
+I0107 00:22:19.917133   94783 kubeadm.go:594] The running cluster does not require reconfiguration: 192.168.58.2
+I0107 00:22:19.917136   94783 kubeadm.go:647] Taking a shortcut, as the cluster seems to be properly configured
+I0107 00:22:19.917138   94783 kubeadm.go:604] restartCluster took 29.895492ms
+I0107 00:22:19.917141   94783 kubeadm.go:392] StartCluster complete in 50.074769ms
+I0107 00:22:19.917147   94783 settings.go:142] acquiring lock: {Name:mk43352a5e3f0da1faab7e590dfc1ee2f08013ce Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0107 00:22:19.917184   94783 settings.go:150] Updating kubeconfig:  /home/mkuklik/.kube/config
+I0107 00:22:19.918031   94783 lock.go:35] WriteFile acquiring /home/mkuklik/.kube/config: {Name:mk94270f9b7f7f4aaa9101bd37130ecd5b4906c1 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0107 00:22:19.920045   94783 kapi.go:244] deployment "coredns" in namespace "kube-system" and context "envoy-profile" rescaled to 1
+I0107 00:22:19.920066   94783 start.go:229] Will wait 6m0s for node &{Name: IP:192.168.58.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}
+I0107 00:22:19.920071   94783 ssh_runner.go:152] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.22.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml"
+I0107 00:22:19.922826   94783 out.go:176] 🔎  Verifying Kubernetes components...
+I0107 00:22:19.920121   94783 addons.go:415] enableAddons start: toEnable=map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false], additional=[]
+I0107 00:22:19.922859   94783 addons.go:65] Setting storage-provisioner=true in profile "envoy-profile"
+I0107 00:22:19.922867   94783 ssh_runner.go:152] Run: sudo systemctl is-active --quiet service kubelet
+I0107 00:22:19.922867   94783 addons.go:153] Setting addon storage-provisioner=true in "envoy-profile"
+W0107 00:22:19.922871   94783 addons.go:165] addon storage-provisioner should already be in state true
+I0107 00:22:19.920195   94783 config.go:176] Loaded profile config "envoy-profile": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.22.3
+I0107 00:22:19.922885   94783 host.go:66] Checking if "envoy-profile" exists ...
+I0107 00:22:19.922895   94783 addons.go:65] Setting default-storageclass=true in profile "envoy-profile"
+I0107 00:22:19.922902   94783 addons_storage_classes.go:33] enableOrDisableStorageClasses default-storageclass=true on "envoy-profile"
+I0107 00:22:19.923034   94783 cli_runner.go:115] Run: docker container inspect envoy-profile --format={{.State.Status}}
+I0107 00:22:19.923147   94783 cli_runner.go:115] Run: docker container inspect envoy-profile --format={{.State.Status}}
+I0107 00:22:19.948011   94783 out.go:176]     ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+I0107 00:22:19.948071   94783 addons.go:348] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I0107 00:22:19.948076   94783 ssh_runner.go:319] scp memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I0107 00:22:19.948107   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:19.950907   94783 addons.go:153] Setting addon default-storageclass=true in "envoy-profile"
+W0107 00:22:19.950912   94783 addons.go:165] addon default-storageclass should already be in state true
+I0107 00:22:19.950938   94783 host.go:66] Checking if "envoy-profile" exists ...
+I0107 00:22:19.951141   94783 cli_runner.go:115] Run: docker container inspect envoy-profile --format={{.State.Status}}
+I0107 00:22:19.956970   94783 start.go:719] CoreDNS already contains "host.minikube.internal" host record, skipping...
+I0107 00:22:19.956984   94783 api_server.go:51] waiting for apiserver process to appear ...
+I0107 00:22:19.957012   94783 ssh_runner.go:152] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0107 00:22:19.966167   94783 api_server.go:71] duration metric: took 46.088586ms to wait for apiserver process to appear ...
+I0107 00:22:19.966178   94783 api_server.go:87] waiting for apiserver healthz status ...
+I0107 00:22:19.966184   94783 api_server.go:240] Checking apiserver healthz at https://192.168.58.2:8443/healthz ...
+I0107 00:22:19.969533   94783 api_server.go:266] https://192.168.58.2:8443/healthz returned 200:
+ok
+I0107 00:22:19.969831   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:19.970049   94783 api_server.go:140] control plane version: v1.22.3
+I0107 00:22:19.970055   94783 api_server.go:130] duration metric: took 3.874243ms to wait for apiserver health ...
+I0107 00:22:19.970062   94783 system_pods.go:43] waiting for kube-system pods to appear ...
+I0107 00:22:19.970295   94783 addons.go:348] installing /etc/kubernetes/addons/storageclass.yaml
+I0107 00:22:19.970301   94783 ssh_runner.go:319] scp memory --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I0107 00:22:19.970333   94783 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" envoy-profile
+I0107 00:22:19.972823   94783 system_pods.go:59] 7 kube-system pods found
+I0107 00:22:19.972829   94783 system_pods.go:61] "coredns-78fcd69978-vwqb8" [6da3c91c-1d1e-45ab-9d4b-b6ae1ca2a6f2] Running
+I0107 00:22:19.972832   94783 system_pods.go:61] "etcd-envoy-profile" [0122a4fb-b625-4793-868f-bfb62e77ef7c] Running
+I0107 00:22:19.972833   94783 system_pods.go:61] "kube-apiserver-envoy-profile" [03507f53-08c6-4339-b919-62650a0af239] Running
+I0107 00:22:19.972835   94783 system_pods.go:61] "kube-controller-manager-envoy-profile" [a0b3860a-d9e9-44ea-adf2-dbd7d0f74bfe] Running
+I0107 00:22:19.972837   94783 system_pods.go:61] "kube-proxy-zrn6p" [67bcd028-c414-4f12-83fa-1f41586da5f6] Running
+I0107 00:22:19.972839   94783 system_pods.go:61] "kube-scheduler-envoy-profile" [fcca6385-9bf9-40cb-841a-71abc1ff15ec] Running
+I0107 00:22:19.972840   94783 system_pods.go:61] "storage-provisioner" [bc0a6b9b-cd10-45ea-8cc5-2e6dbab34c82] Running
+I0107 00:22:19.972842   94783 system_pods.go:74] duration metric: took 2.777837ms to wait for pod list to return data ...
+I0107 00:22:19.972847   94783 kubeadm.go:547] duration metric: took 52.771674ms to wait for : map[apiserver:true system_pods:true] ...
+I0107 00:22:19.972855   94783 node_conditions.go:102] verifying NodePressure condition ...
+I0107 00:22:19.974685   94783 node_conditions.go:122] node storage ephemeral capacity is 1913040768Ki
+I0107 00:22:19.974693   94783 node_conditions.go:123] node cpu capacity is 16
+I0107 00:22:19.974700   94783 node_conditions.go:105] duration metric: took 1.843396ms to run NodePressure ...
+I0107 00:22:19.974706   94783 start.go:234] waiting for startup goroutines ...
+I0107 00:22:19.988892   94783 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49157 SSHKeyPath:/home/mkuklik/.minikube/machines/envoy-profile/id_rsa Username:docker}
+I0107 00:22:20.041495   94783 ssh_runner.go:152] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.22.3/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I0107 00:22:20.066410   94783 ssh_runner.go:152] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.22.3/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I0107 00:22:20.133823   94783 out.go:176] 🌟  Enabled addons: storage-provisioner, default-storageclass
+I0107 00:22:20.133838   94783 addons.go:417] enableAddons completed in 213.723189ms
+I0107 00:22:20.156125   94783 start.go:473] kubectl: 1.23.1, cluster: 1.22.3 (minor skew: 1)
+I0107 00:22:20.158737   94783 out.go:176] 🏄  Done! kubectl is now configured to use "envoy-profile" cluster and "default" namespace by default
+
+* 
