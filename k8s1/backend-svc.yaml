@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backend-svc
   labels:
     client: internal
     version: 1.0.0
@@ -11,8 +11,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 3000
+    - port: 8000
       targetPort: 5000
-      nodePort: 31515
   selector:
     app: backend
+    tier: t1

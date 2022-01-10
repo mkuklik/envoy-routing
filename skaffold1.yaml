@@ -11,6 +11,7 @@ build:
 deploy:
   kubectl:
     manifests:
-    - k8s1/backend.yaml
-    - k8s1/deployment.yaml
+    - k8s1/backend-svc.yaml
+    - k8s1/backend-deployment.yaml
     - k8s1/ingress.yaml
+    - k8s1/lb.yaml

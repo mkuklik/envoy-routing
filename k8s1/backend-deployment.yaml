@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backend
   labels:
-    client: internal
-    version: 1.0.0
-    environtment: dev
+    app: backend
   annotations:
-      description: Kackend Deployment
+      description: Backend Deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: backend
+      tier: t1
   template:
     metadata:
       name: backend-pod
       labels:
         app: backend
+        tier: t1
     spec:
       containers:
         - name: backend
@@ -30,9 +30,7 @@ spec:
                 fieldRef:
                   fieldPath: spec.nodeName
             - name: POD_PORT
-              valueFrom:
-                fieldRef:
-                  fieldPath: spec.containers.backendcontainerPort
+              value: "5000"
             - name: POD_NAME
               valueFrom:
                 fieldRef:
@@ -49,4 +47,17 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.serviceAccountName
-                
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 5000
+            httpHeaders:
+            initialDelaySeconds: 20
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 5000
+            httpHeaders:
+            initialDelaySeconds: 20
+            periodSeconds: 3    

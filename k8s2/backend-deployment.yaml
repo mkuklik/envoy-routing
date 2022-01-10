@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+  annotations:
+      description: Backend Deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+      tier: t1
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        app: backend
+        tier: t1
+    spec:
+      containers:
+        - name: backend
+          image: backend-img
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: POD_PORT
+              value: "5000"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: POD_SERVICE_ACCOUNT
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.serviceAccountName
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 5000
+            httpHeaders:
+            initialDelaySeconds: 20
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 5000
+            httpHeaders:
+            initialDelaySeconds: 20
+            periodSeconds: 3    

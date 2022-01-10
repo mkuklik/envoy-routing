@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lb-srv
+  labels:
+    app: backend
+    tier: t1
+spec:
+  type: LoadBalancer
+  ports:
+    # Port accessible inside cluster
+  - port: 80
+    # Port to forward to inside the pod
+    targetPort: 5000
+    # Port accessible outside cluster
+    nodePort: 30002
+  selector:
+    app: backend
+    tier: t1

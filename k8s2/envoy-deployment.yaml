@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: edge-envoy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: edge-envoy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: edge-envoy
+        # service: edge-envoy-admin
+    spec:
+      containers:
+      - name: edge-envoy
+        image: envoy-img
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        - containerPort: 8001
+          protocol: TCP
+        resources: {}
+      restartPolicy: Always
+status: {}

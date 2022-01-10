@@ -33,8 +33,9 @@ func NewBackendServer(port int, name string) *BackendServer {
 		Server: http.Server{
 			Addr: fmt.Sprintf(":%d", port),
 		},
-		name: name,
-		port: port,
+		name:    name,
+		port:    port,
+		healthy: 1,
 	}
 	return &s
 }

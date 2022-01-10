@@ -1,0 +1,22 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: envoy-routing
+build:
+  artifacts:
+  - image: backend-img
+    context: backend
+    docker:
+      dockerfile: Dockerfile
+  - image: envoy-img
+    context: edge-envoy2
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8s2/backend-deployment.yaml
+    - k8s2/backend-svc.yaml
+    - k8s2/envoy-admin-svc.yaml
+    - k8s2/envoy-deployment.yaml
+    - k8s2/envoy-svc.yaml
