@@ -3,12 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"net/http"
 	"sync/atomic"
 	"time"
 
-	"github.com/golang/glog"
+	log "github.com/sirupsen/logrus"
+	"go.opencensus.io/zpages"
+
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 )
@@ -19,20 +20,18 @@ func timeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 type BackendServer struct {
-	http.Server
+	mux     *http.ServeMux
+	addr    string
 	name    string
 	port    int
 	healthy int64
-	logger  log.Logger
-	// mux  *http.ServeMux
 }
 
 func NewBackendServer(port int, name string) *BackendServer {
-	glog.Info(fmt.Sprintf(":%d", port))
+	log.Info(fmt.Sprintf("New backend `%s` on :%d", name, port))
 	s := BackendServer{
-		Server: http.Server{
-			Addr: fmt.Sprintf(":%d", port),
-		},
+		addr:    fmt.Sprintf(":%d", port),
+		mux:     http.NewServeMux(),
 		name:    name,
 		port:    port,
 		healthy: 1,
@@ -41,15 +40,21 @@ func NewBackendServer(port int, name string) *BackendServer {
 }
 
 func (s *BackendServer) Init() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", s.main_handler)
-	mux.HandleFunc("/headers", s.headers)
-	mux.HandleFunc("/time", timeHandler)
-	mux.Handle("/healthz", s.healthz())
-	s.Handler = s.logging(mux)
+
+	s.mux.HandleFunc("/", s.main_handler)
+	s.mux.HandleFunc("/headers", s.headers)
+	s.mux.HandleFunc("/time", timeHandler)
+	s.mux.Handle("/healthz", s.healthz())
+
+	zpages.Handle(s.mux, "/debug")
+
 }
 
 func (s *BackendServer) main_handler(w http.ResponseWriter, req *http.Request) {
+	if req.URL.Path != "/" {
+		http.NotFound(w, req)
+		return
+	}
 	fmt.Fprintf(w, "this is server %s\n", s.name)
 }
 
@@ -58,13 +63,6 @@ func (s *BackendServer) headers(w http.ResponseWriter, req *http.Request) {
 		for _, h := range headers {
 			fmt.Fprintf(w, "%v: %v\n", name, h)
 		}
-	}
-}
-
-func (s *BackendServer) Start() {
-	glog.Infof("Starting server `%s` on %s", s.name, s.Addr)
-	if err := s.ListenAndServe(); err != nil {
-		panic(err.Error())
 	}
 }
 
@@ -78,19 +76,34 @@ func (s *BackendServer) healthz() http.Handler {
 	})
 }
 
-func (s *BackendServer) logging(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		glog.Infof("%s %s %s %s", r.Method, r.URL.Path, r.RemoteAddr, r.UserAgent())
-		defer func() {
-			// requestID, ok := r.Context().Value(requestIDKey).(string)
-			// if !ok {
-			// 	requestID = "unknown"
-			// }
-			// requestID := "unknown"
-			// s.logger.Println(requestID, r.Method, r.URL.Path, r.RemoteAddr, r.UserAgent())
-		}()
-		next.ServeHTTP(w, r)
-	})
+func (s *BackendServer) Start() {
+	log.Infof("Starting server `%s` on %s", s.name, s.addr)
+	if err := http.ListenAndServe(s.addr, NewRequestLogger(s.mux)); err != nil {
+		panic(err.Error())
+	}
+}
+
+type RequestLogger struct {
+	handler http.Handler
+}
+
+func (rl RequestLogger) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+	log.Printf("Started %s %s", r.Method, r.URL.Path)
+	defer func() {
+		// requestID, ok := r.Context().Value(requestIDKey).(string)
+		// if !ok {
+		// 	requestID = "unknown"
+		// }
+		// requestID := "unknown"
+		// s.logger.Println(requestID, r.Method, r.URL.Path, r.RemoteAddr, r.UserAgent())
+		log.Printf("Completed %s %s in %v", r.Method, r.URL.Path, time.Since(start))
+	}()
+	rl.handler.ServeHTTP(w, r)
+}
+
+func NewRequestLogger(handlerToWrap http.Handler) *RequestLogger {
+	return &RequestLogger{handlerToWrap}
 }
 
 type Options struct {
@@ -112,10 +125,10 @@ func main() {
 
 	err := viper.Unmarshal(&opts)
 	if err != nil {
-		glog.Fatalf("unable to decode into struct, %v", err)
+		log.Fatalf("unable to decode into struct, %v", err)
 	}
 
-	glog.Infof("after parse %s", opts.Name)
+	log.Infof("after parse %s", opts.Name)
 	backend := NewBackendServer(opts.Port, opts.Name)
 	backend.Init()
 	backend.Start()

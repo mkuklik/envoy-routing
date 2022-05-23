@@ -4,6 +4,12 @@
 
 2. envoy with routing table pulled from xDS splitting traffic between two servers
 
+3. envoy internal proxy with routing table pulled from xDS splitting traffic between two servers
+
+4. envoy two stage internal proxy
+
+5. envoy multicasting
+
 # minikube 
 ```bash
 minikube start
@@ -64,6 +70,7 @@ skaffold dev
 skaffold run
 kubectl config current-context
 
+skaffold run --tail -f <file> -p <profile>
 
 helm repo add slamdev-helm-charts https://slamdev.github.io/helm-charts
 helm install slamdev-helm-charts/envoy --generate-name
